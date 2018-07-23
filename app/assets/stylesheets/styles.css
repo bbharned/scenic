@@ -19,6 +19,27 @@
 /******* HOMEPAGE ********/
 
 .jumbo-splash {
-	width:100%; min-height:700px; background-color: #999999;
-	margin-bottom: 45px;
+	width:100%; margin-bottom: 45px;
+}
+.jumbo-splash .jumbotron {
+	min-height: 550px; background-image: url("http://www.minimiseusa.com/images/SolarPanels_41ccb83f-82da-4670-bacc-38751f3ae01b.jpg");
+	background-size:cover; /*background-image: url("http://www.minimiseusa.com/images/SolarPanels_editted");*/ background-position:top;
+	background-blend-mode: luminosity;
+}
+.jumbo-splash .jumbotron .display-4 {
+	font-size:4em; color:#000000; text-shadow: 1px 1px 5px #a6cc3a, 2px 2px 5px #ffffff; 
+}
+.jumbo-splash .jumbotron p.lead {
+	font-size: 2.25em; color:#FFFFFF; text-shadow: 1px 1px 0px #272727; background-color: rgba(47,47,47,0.40); padding: 25px;
+	margin-top: 3%;
+}
+.jumbo-splash .jumbotron p.lead span {
+	font-weight:lighter;
+}
+.jumbo-splash .jumbotron .btn-primary {
+	background-color:#a6cc3a; border: 1px solid green;
+}
+
+.jumbo-splash .jumbotron .btn-primary:hover {
+	background-color:green;
 }
