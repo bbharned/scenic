@@ -1,7 +1,7 @@
 <div class="top-top-nav">
   <ul class="nav justify-content-end">
     <li class="nav-item">
-    <a class="nav-link">Call Today:&nbsp;&nbsp; 888-841-1840</a>
+    <a class="nav-link">Call Today:&nbsp;&nbsp;&nbsp; <span style="font-weight:bold;">888-841-1840</span></a>
   </li>
   <li class="nav-item">
     <a class="nav-link">|</a>
@@ -26,10 +26,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <%= link_to "Home", root_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <%= link_to "About", about_path, class: "nav-link" %>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,7 +47,7 @@
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+        <%= link_to "Contact", contact_path, class: "nav-link" %>
       </li>
       
     </ul>
