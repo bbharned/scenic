@@ -14,6 +14,14 @@
 .top-top-nav ul li a, .top-top-nav ul li {
 	color:#272727; font-size: .9em;
 }
+.well {
+    max-width: 98%; padding-left: 2% !important; padding-right: 2% !important;
+    background-color: #f6f6f6;
+}
+.well-sm {
+    margin-bottom: 7px !important; padding-top: 5px; padding-bottom: 5px; border-radius: 5px;
+}
+
 
 
 /******* HOMEPAGE ********/
