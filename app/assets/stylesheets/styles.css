@@ -21,6 +21,12 @@
 .well-sm {
     margin-bottom: 7px !important; padding-top: 5px; padding-bottom: 5px; border-radius: 5px;
 }
+.btn-primary {
+	background-color:#a6cc3a; border-color: #999999;
+}
+.btn-primary:hover {
+	background-color: green;
+}
 
 
 
@@ -48,7 +54,7 @@
 	font-weight:lighter;
 }
 .jumbo-splash .jumbotron .btn-primary {
-	background-color:#a6cc3a; border: 1px solid green;
+	background-color:#a6cc3a; border: 1px solid #999999;
 }
 
 .jumbo-splash .jumbotron .btn-primary:hover {
