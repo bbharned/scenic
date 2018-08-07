@@ -1,10 +1,18 @@
 <div class="container">
-	<h1><%= @user.firstname %></h1>
+	<div class="row">
+		<div class="col-md-8">
+			<h1><%= @user.firstname %> <%= @user.lastname %></h1>
+		</div>
+		<div class="col-md-4" align="right">
+		<%= link_to "Edit User", edit_user_path(@user), class: "btn btn-primary" %>
+	</div>
+	</div>
 	<hr />
 
 
 
 
 
+<p><br /><br /><%= link_to "Back to Users", users_path, class: "btn btn-primary" %></p>
 
 </div>
