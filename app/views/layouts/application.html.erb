@@ -14,13 +14,7 @@
   <%= render 'layouts/navbar' %>
   </div>
   	<div style="min-height: 800px; padding-bottom: 100px; padding-top: 75px;">
-    	<% flash.each do |name, msg| %>
-        <div class="container">
-          <ul>
-            <li><%= msg %></li>
-          </ul>
-        </div>
-      <% end %>
+    	<%= render 'layouts/messages' %>
       <%= yield %>
 	</div>
   </body>
