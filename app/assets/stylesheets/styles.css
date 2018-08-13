@@ -35,14 +35,17 @@
 .jumbo-splash {
 	width:100%; margin-bottom: 45px;
 }
+/*
 .jumbo-splash .jumbotron {
 	min-height: 550px; background-image: url("/assets/SolarPanels.jpg"); 
 	background-size:cover; 
 	/*background-image: url("http://www.minimiseusa.com/images/SolarPanels_41ccb83f-82da-4670-bacc-38751f3ae01b.jpg");*/ 
 	/*background-image: url("http://www.minimiseusa.com/images/SolarPanels_editted");*/ 
+	/*
 	background-position:top;
 	background-blend-mode: luminosity; 
 }
+*/
 .jumbo-splash .jumbotron .display-4 {
 	font-size:4em; color:#000000; text-shadow: 1px 1px 5px #a6cc3a, 2px 2px 5px #ffffff; 
 }

@@ -25,7 +25,7 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   
 
-  config.assets.compile = true #was false, changed to make images load from CSS
+  config.assets.compile = false #was false, changed to make images load from CSS
 
   
 
