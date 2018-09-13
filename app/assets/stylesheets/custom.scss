@@ -3,10 +3,8 @@ $navbar-border-radius: 0px;
 .jumbo-splash .jumbotron {
 	min-height: 550px; background-image: asset-url('SolarPanels.jpg'); 
 	background-size:cover; 
-	/*background-image: url("http://www.minimiseusa.com/images/SolarPanels_41ccb83f-82da-4670-bacc-38751f3ae01b.jpg");*/ 
-	/*background-image: url("http://www.minimiseusa.com/images/SolarPanels_editted");*/ 
 	background-position:top;
-	background-blend-mode: luminosity; 
+	/*background-blend-mode: luminosity; */
 }
 
 @import "bootstrap";

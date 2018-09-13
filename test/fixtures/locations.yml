@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scl_ref: 
+  name: MyString
+  type: 
+  address: MyString
+  area: MyString
+
+two:
+  scl_ref: 
+  name: MyString
+  type: 
+  address: MyString
+  area: MyString
