@@ -26,39 +26,31 @@ class LocationsController < ApplicationController
   def create
     @location = Location.new(location_params)
 
-    respond_to do |format|
-      if @location.save
-        format.html { redirect_to @location, notice: 'Location was successfully created.' }
-        format.json { render :show, status: :created, location: @location }
-      else
-        format.html { render :new }
-        format.json { render json: @location.errors, status: :unprocessable_entity }
-      end
-    end
+    if @location.save
+      flash[:success] = "HCPS Location was successfully created"
+      redirect_to locations_path
+    else
+      render 'new'
+    end 
   end
 
   # PATCH/PUT /locations/1
   # PATCH/PUT /locations/1.json
   def update
-    respond_to do |format|
-      if @location.update(location_params)
-        format.html { redirect_to @location, notice: 'Location was successfully updated.' }
-        format.json { render :show, status: :ok, location: @location }
-      else
-        format.html { render :edit }
-        format.json { render json: @location.errors, status: :unprocessable_entity }
-      end
-    end
+    if @location.update(location_params)
+      flash[:success] = "Location was successfully updated"
+      redirect_to locations_path
+    else
+      render 'edit'
+    end 
   end
 
   # DELETE /locations/1
   # DELETE /locations/1.json
   def destroy
     @location.destroy
-    respond_to do |format|
-      format.html { redirect_to locations_url, notice: 'Location was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    flash[:danger] = "Location was successfully deleted"
+    redirect_to locations_path 
   end
 
   private

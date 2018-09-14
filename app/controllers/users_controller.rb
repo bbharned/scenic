@@ -17,7 +17,7 @@ def create
 	#render plain: params[:user].inspect
 	@user = User.new(user_params)
 	if @user.save
-		flash[:notice] = "User was successfully created"
+		flash[:success] = "User was successfully created"
 		redirect_to user_path(@user)
 	else
 		render 'new'
@@ -26,7 +26,7 @@ end
 
 def update
 	if @user.update(user_params)
-		flash[:notice] = "User was successfully updated"
+		flash[:success] = "User was successfully updated"
 		redirect_to user_path(@user)
 	else
 		render 'edit'
