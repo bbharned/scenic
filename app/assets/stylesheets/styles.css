@@ -85,5 +85,9 @@ ul.pagination li.previous-page a {
 
 
 
-
+@media screen and (max-width: 983px) {
+	.goAway {
+		display: none;
+	}
+}
 
