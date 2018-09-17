@@ -1,28 +1,26 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
-  # GET /locations
-  # GET /locations.json
+  
   def index
-    @locations = Location.all
+    #paginaton needed
+    @locations = Location.paginate(page: params[:page], per_page: 10)
   end
 
-  # GET /locations/1
-  # GET /locations/1.json
+  
   def show
   end
 
-  # GET /locations/new
+  
   def new
     @location = Location.new
   end
 
-  # GET /locations/1/edit
+  
   def edit
   end
 
-  # POST /locations
-  # POST /locations.json
+  
   def create
     @location = Location.new(location_params)
 
@@ -34,8 +32,7 @@ class LocationsController < ApplicationController
     end 
   end
 
-  # PATCH/PUT /locations/1
-  # PATCH/PUT /locations/1.json
+  
   def update
     if @location.update(location_params)
       flash[:success] = "Location was successfully updated"
@@ -45,8 +42,7 @@ class LocationsController < ApplicationController
     end 
   end
 
-  # DELETE /locations/1
-  # DELETE /locations/1.json
+  
   def destroy
     @location.destroy
     flash[:danger] = "Location was successfully deleted"

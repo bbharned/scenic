@@ -1,7 +1,7 @@
 <div class="container">
 
 
-<div class="row">
+<div class="row ">
 <div class="col-md-8">
 <h1>HCPS Locations</h1>
   </div>
@@ -12,25 +12,43 @@
 <hr />
 <br />
 
-
-  
-    <% @locations.each do |location| %>
-    <div class="row">
-        <div class="well location-sum col-md-12">
-          <h4><%= location.name %></h4>
-        <div class="col col-md-10 offset-md-1">
-          <h6>Reference ID#:&nbsp;&nbsp;&nbsp;<span style="font-weight:lighter;"><%= location.scl_ref %></span></h6>
-          <h6>School Type:&nbsp;&nbsp;&nbsp;<span style="font-weight:lighter;"><%= location.sc_type %></span></h6>
-          <h6>School Area:&nbsp;&nbsp;&nbsp;<span style="font-weight:lighter;"><%= location.area %></span></h6>
-          <h6>School Address:&nbsp;&nbsp;&nbsp;<span style="font-weight:lighter;"><%= location.address %></span></h6>
-          <p><%= link_to 'Show', location %> &nbsp;|&nbsp; <%= link_to 'Edit', edit_location_path(location) %> &nbsp;|&nbsp; <%= link_to 'Delete', location, method: :delete, data: { confirm: 'Are you sure you want to delete this location?' } %></p>
-        </div>
-        </div>
-      
+<% if @locations.count > 10 %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="paginate">
+      <%= will_paginate(@locations, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
     </div>
-  <% end %>
+  </div>  
+</div>
+<% end %>
+    
+    <div class="row" style="margin-bottom: 10px; font-weight: bold;">
+        <div class="col-md-3">Location Name</div>
+        <div class="col-md-6">Location Address</div>
+        
+      </div>
+
+    <% @locations.each do |location| %>
+    
+      <div class="well location-sum">
+         <div class="row">
+          <div class="col-md-3" style="text-decoration:underline;"><%= link_to "#{location.name}", location_path(location), style: "color:inherit;" %></div>
+          <div class="col-md-6"><%= location.address %></div>
+          <div class="col-md-1"><%= link_to 'Show', location %></div>
+          <div class="col-md-1"><%= link_to 'Edit', edit_location_path(location) %></div>
+          <div class="col-md-1"><%= link_to 'Delete', location, method: :delete, data: { confirm: 'Are you sure you want to delete this location?' } %></div>
+        </div>
+      </div>
+
+    <% end %>
 
 
+<br />
+
+<div class="paginate">
+  <%= will_paginate(@locations, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
+</div>
+  
 
 
 </div>

@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
 
 def index
+	#pagination needed
 	@users = User.all
 end
 

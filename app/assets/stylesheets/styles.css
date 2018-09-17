@@ -33,6 +33,18 @@
 .control-label {
 	padding-top: 10px;
 }
+.paginate {
+	margin-bottom:45px;  
+}
+ul.pagination {
+	justify-content: center;
+}
+ul.pagination li.active {
+	background-color:#a6cc3a;
+}
+ul.pagination li.previous-page a {
+	color:#a6cc3a;
+}
 
 
 /******* HOMEPAGE ********/
