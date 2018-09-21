@@ -1,9 +1,12 @@
 <div class="container">
 	<h1 align="center" class="page-header">Maintenance Working Order Form</h1>
 	<h6 align="center" class="page-sub-header">Please fill out the form below and we will be in contact with you shortly.</h6>
+	
 	<hr />
+	<%= render 'shared/errors', obj: @order %>
 	<h4 align="center" style="text-decoration: underline;;">Please select your facility</h4>
 
+	
 
 	<%= form_for(@order, :html => {class: "form-horizontal", role: "form"}) do |f| %>
 			
@@ -21,11 +24,10 @@
 					    </div>
 					    <div class="col-sm-12" align="center">
 							
-							<%= f.select(:location_id, {:class => 'form-control custom-select custom-select-lg mb-3'}) do %>
-								  <% @locations.each do |l| -%>
-								    <%= content_tag(:option, "#{l.name} - #{l.address} - #{l.sc_type}", value: l.id) %>
-								  <% end %>
-							<% end %>
+							<%= select(:order, :location_id, Location.all.collect {|l| [ "#{l.name} - #{l.address} - #{l.sc_type}", l.id ] }, { include_blank: true, class: "form-control" }) %>
+							
+
+							
 							
 						</div>	
 				    
@@ -115,7 +117,7 @@
 						
 					</div>
 				</div>
-
+				<br />
 				<div class="form-group">
 					<div class="row">
 						<div class="col col-md-12">

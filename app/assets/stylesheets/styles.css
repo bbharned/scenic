@@ -51,6 +51,13 @@ ul.pagination li.previous-page a {
 .no-display {
 	display:none;
 }
+.panel {
+	padding: 25px; background-color: #F6F6F6; border-radius: 20px;
+	margin: auto;
+}
+.panel ul {
+	list-style: none;
+}
 
 
 /******* HOMEPAGE ********/
