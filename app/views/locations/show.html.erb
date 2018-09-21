@@ -27,6 +27,13 @@
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>
-
-
+<br /><br />
+<% if @orders.any? %>
+  <hr />
+  <h3>Open Work Orders</h3>
+  <br />
+  <% @orders.each do |order| %>
+    <p>Requested by: <%= order.requestor_name %></p>
+  <% end %>
+<% end %>
 </div>

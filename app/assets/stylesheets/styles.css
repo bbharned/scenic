@@ -45,6 +45,12 @@ ul.pagination li.active {
 ul.pagination li.previous-page a {
 	color:#a6cc3a;
 }
+.green {
+	background-color:green; color:green;
+}
+.no-display {
+	display:none;
+}
 
 
 /******* HOMEPAGE ********/

@@ -8,6 +8,8 @@ get 'about', to: 'pages#about'
 get 'contact', to: 'pages#contact'
 
 resources :users
+get 'maintenance', to: 'orders#new'
+resources :orders, except: :new
 
 get 'login', to: 'sessions#new'
 post 'login', to: 'sessions#create'

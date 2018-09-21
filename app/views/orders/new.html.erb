@@ -1,0 +1,154 @@
+<div class="container">
+	<h1 align="center" class="page-header">Maintenance Working Order Form</h1>
+	<h6 align="center" class="page-sub-header">Please fill out the form below and we will be in contact with you shortly.</h6>
+	<hr />
+	<h4 align="center" style="text-decoration: underline;;">Please select your facility</h4>
+
+
+	<%= form_for(@order, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+			
+			
+
+			
+		
+			<div class="form-group">
+				<div class = "row"> 
+			   	
+				   	<div class="col col-sm-8 offset-sm-2">
+					    
+					    <div class="control-label col-sm-12" align="center">
+					    	<%= f.label :location_id, style: "font-weight:bold;" %>
+					    </div>
+					    <div class="col-sm-12" align="center">
+							
+							<%= f.select(:location_id, {:class => 'form-control custom-select custom-select-lg mb-3'}) do %>
+								  <% @locations.each do |l| -%>
+								    <%= content_tag(:option, "#{l.name} - #{l.address} - #{l.sc_type}", value: l.id) %>
+								  <% end %>
+							<% end %>
+							
+						</div>	
+				    
+				  	</div>
+			  
+			  </div><br />
+			  
+			  <hr />
+				
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="control-label col-sm-12">
+								<%= f.label "Order Type", style: "font-weight:bold;" %>
+							</div>
+							<div class="col-sm-12 otype_select">
+								
+					               <%= f.select :order_type, options_for_select([
+						              [ ],
+						              ["HVAC", "HVAC"], 
+						              ["LED Lighting (interior)", "LED Lighting (interior)"], 
+						              ["LED Lighting (exterior)", "LED Lighting (exterior)"],
+						              ["Solar", "Solar"]
+						              ], @order.order_type), class: "form-control" %>
+				            	
+							</div>
+							
+							<div class="lights_drop">
+			                    <div class="control-label col-sm-12">
+									<%= f.label :emergency_lights, style: "font-weight:bold;" %>
+								</div>
+								<div class="col-sm-12">
+									<%= f.label :emergency_lights, "True", :value => true %>
+									<%= f.radio_button :emergency_lights, true %>
+									&nbsp;&nbsp;
+									<%= f.label :emergency_lights, "False", :value => false %>
+									<%= f.radio_button :emergency_lights, false %>
+								</div>
+							</div>
+						</div>
+					
+						
+						
+
+						<div class="col col-sm-6">
+							<div class="control-label col-sm-12">
+								<%= f.label "Facility or Building Info", style: "font-weight:bold;" %>
+							</div>
+							<div class="col-sm-12">
+								<%= f.text_field :facility_info, class: "form-control", placeholder: "Facility Info" %>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<div class="row">
+						<div class="col col-md-6">
+							<div class="control-label col-md-12">
+								<%= f.label "Requestor Name", style: "font-weight:bold;" %>
+							</div>
+							<div class="col-sm-12">
+								<%= f.text_field :requestor_name, class: "form-control", placeholder: "Your Name" %>
+							</div>
+						</div>
+						<div class="col col-md-6">
+							<div class="control-label col-md-12">
+								<%= f.label :email, style: "font-weight:bold;" %>
+							</div>
+							<div class="col-sm-12">
+								<%= f.text_field :email, class: "form-control", placeholder: "Enter Your Email" %>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="row">
+						<div class="col col-md-6">
+							<div class="control-label col-md-12">
+								<%= f.label "Requestor Phone", style: "font-weight:bold;" %>
+							</div>
+							<div class="col-sm-12">
+								<%= f.text_field :requestor_phone, class: "form-control", placeholder: "Your Phone Number" %>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="row">
+						<div class="col col-md-12">
+							<div class="control-label col-md-12">
+								<%= f.label "Action Requested / Comments", style: "font-weight:bold;" %>
+							</div>
+							<div class="col-sm-12">
+								<%= f.text_area :comments, rows: 10, class: "form-control", placeholder: "Enter requests & comments here" %>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			
+			
+			<br /><br />
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<%= f.submit(@order.new_record? ? "Create Work Order" : "Update Order", class: "btn btn-primary btn-lg") %>
+				</div>
+			</div>
+			<br /><br />
+			<hr />
+	</div>
+</div>
+			
+
+			
+			
+
+			
+		<% end %>
+
+
+
+</div>

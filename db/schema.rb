@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180914183604) do
+ActiveRecord::Schema.define(version: 20180920170319) do
 
   create_table "locations", force: :cascade do |t|
     t.integer  "scl_ref"
@@ -20,6 +20,20 @@ ActiveRecord::Schema.define(version: 20180914183604) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "sc_type"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "facility_info"
+    t.integer  "location_id"
+    t.string   "order_type"
+    t.boolean  "emergency_lights", default: false
+    t.string   "requestor_name"
+    t.string   "requestor_phone"
+    t.string   "email"
+    t.text     "comments"
+    t.boolean  "completed",        default: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
   create_table "users", force: :cascade do |t|

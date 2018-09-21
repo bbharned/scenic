@@ -9,6 +9,7 @@ class LocationsController < ApplicationController
 
   
   def show
+    @orders = @location.orders
   end
 
   
