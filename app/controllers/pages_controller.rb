@@ -5,9 +5,11 @@ def index
 end
 
 
+
 def about
 
 end
+
 
 
 def contact
@@ -15,9 +17,19 @@ def contact
 end
 
 
+
 def what
 
 end
+
+
+
+def how
+
+end
+
+
+
 
 
 end

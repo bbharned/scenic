@@ -58,6 +58,21 @@ ul.pagination li.previous-page a {
 .panel ul {
 	list-style: none;
 }
+.container h2 {
+	color:#a6cc3a; margin-top: 25px;
+}
+.page-image {
+	margin-top: 45px; margin-bottom: 45px;
+}
+.card {
+	margin-bottom: 25px !important;
+}
+.card .card-img-top {
+	width:100%; 
+}
+.card .card-img-top img {
+	height: 100%; width: 100%;
+}
 
 
 /******* HOMEPAGE ********/

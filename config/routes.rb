@@ -1,18 +1,24 @@
 Rails.application.routes.draw do
-  resources :locations #HCPS locations
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 root 'pages#index'
 get 'about', to: 'pages#about'
 get 'contact', to: 'pages#contact'
 get 'what', to: 'pages#what'
 get 'what.php', to: 'pages#what'
+get 'how', to: 'pages#how'
+get 'how.php', to: 'pages#how'
 
-resources :users
+
+resources :users #Website Users
+
+
+#HCPS Functionality Routes
+resources :locations #HCPS locations
 get 'maintenance', to: 'orders#new'
-resources :orders, except: :new
+resources :orders, except: :new #HCPS Maintenance Requests
 
+#Site Sessions
 get 'login', to: 'sessions#new'
 post 'login', to: 'sessions#create'
 delete 'logout', to: 'sessions#destroy'
