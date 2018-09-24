@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+	before_action :require_user, only: [:index, :edit, :update, :destroy]
 
 def index
 	@orders = Order.all
@@ -13,10 +14,10 @@ def create
 	@locations = Location.all
 	@order = Order.new(order_params)
     if @order.save
-      flash[:success] = "Your work has been submitted. We will be in touch shortly, within 24 hours. Your work order number and details have been emailed to you."
+      flash[:success] = "Your maintenance request has been submitted.  Your Maintenance Order number is #{@order.id}.  We will be in touch shortly, within 24 hours.  Your maintenace request details have been emailed to you."
       redirect_to maintenance_path
     else
-      flash[:danger] = "There seems to have been a problem submitting your work order.  Please call us at 888-841-1840."
+      flash[:danger] = "There seems to have been a problem submitting your work order.  Please check the errors listed below and try again."
       render 'new'
     end 
 end

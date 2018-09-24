@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 	before_action :set_user, only: [:edit, :update, :show, :destroy]
-
+	before_action :require_user
 
 def index
 	#pagination needed

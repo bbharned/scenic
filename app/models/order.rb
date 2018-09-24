@@ -1,7 +1,8 @@
 class Order < ApplicationRecord
 	belongs_to :location
+	
 	validates :requestor_name, presence: true, length: { minimum: 2, maximum: 50 }
-	validates :requestor_phone, presence: true, length: { minimum: 10, maximum: 25}
+	validates :requestor_phone, presence: true, length: { minimum: 7, maximum: 25}
 	validates :order_type, presence: true
 	validates :location_id, presence: true
 

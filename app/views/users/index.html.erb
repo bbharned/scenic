@@ -4,7 +4,9 @@
 		<h1>Minimise Users</h1>
 	</div>
 	<div class="col-md-4" align="right">
+		<% if logged_in? && current_user.admin? %>
 		<%= link_to "Add New User", new_user_path, class: "btn btn-primary" %>
+		<% end %>
 	</div>
 </div>
 <hr />
@@ -21,15 +23,32 @@
 			<div class="col-md-5">
 				<%= u.company %>
 			</div>
-			<div class="col-md-1">
-				<%= link_to "Show", user_path(u) %>
-			</div>
-			<div class="col-md-1">
-				<%= link_to "Edit", edit_user_path(u) %>
-			</div>
-			<div class="col-md-1">
-				<%= link_to 'Delete', user_path(u), method: :delete, data: {confirm: "Are you sure you want to delete this user?"} %>
-			</div>
+				
+			<% if logged_in? && current_user.admin? %>	
+				<div class="col-md-1">
+					<%= link_to "Show", user_path(u) %>
+				</div>
+				<div class="col-md-1">
+					<%= link_to "Edit", edit_user_path(u) %>
+				</div>
+				<div class="col-md-1">
+					<%= link_to 'Delete', user_path(u), method: :delete, data: {confirm: "Are you sure you want to delete this user?"} %>
+				</div>
+			<% elsif  logged_in? && current_user == u %>
+				<div class="col-md-1">
+					<%= link_to "Edit", edit_user_path(u) %>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1">
+					<%= link_to "Show", user_path(u) %>
+				</div>
+			<% else %>
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1">
+					<%= link_to "Show", user_path(u) %>
+				</div>
+			<% end %>
 		</div>
 	</div>
 

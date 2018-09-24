@@ -42,7 +42,7 @@
 							<div class="control-label col-sm-12">
 								<%= f.label "Order Type", style: "font-weight:bold;" %>
 							</div>
-							<div class="col-sm-12 otype_select">
+							<div class="col-sm-12">
 								
 					               <%= f.select :order_type, options_for_select([
 						              [ ],
@@ -50,22 +50,25 @@
 						              ["LED Lighting (interior)", "LED Lighting (interior)"], 
 						              ["LED Lighting (exterior)", "LED Lighting (exterior)"],
 						              ["Solar", "Solar"]
-						              ], @order.order_type), class: "form-control" %>
+						              ], @order.order_type), class: "form-control", id: "otype_select" %>
 				            	
 							</div>
 							
-							<div class="lights_drop">
-			                    <div class="control-label col-sm-12">
-									<%= f.label :emergency_lights, style: "font-weight:bold;" %>
+								<div class="lights_drop-question">
+									<div class="lights_drop">
+				                    <div class="control-label col-sm-12">
+										<%= f.label :emergency_lights, style: "font-weight:bold;" %>
+									</div>
+									<div class="col-sm-12">
+										<%= f.label :emergency_lights, "True", :value => true %>
+										<%= f.radio_button :emergency_lights, true %>
+										&nbsp;&nbsp;
+										<%= f.label :emergency_lights, "False", :value => false %>
+										<%= f.radio_button :emergency_lights, false %>
+									</div>
+									</div>
 								</div>
-								<div class="col-sm-12">
-									<%= f.label :emergency_lights, "True", :value => true %>
-									<%= f.radio_button :emergency_lights, true %>
-									&nbsp;&nbsp;
-									<%= f.label :emergency_lights, "False", :value => false %>
-									<%= f.radio_button :emergency_lights, false %>
-								</div>
-							</div>
+							
 						</div>
 					
 						
@@ -150,7 +153,6 @@
 
 			
 		<% end %>
-
 
 
 </div>

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 root 'pages#index'
 get 'about', to: 'pages#about'
 get 'contact', to: 'pages#contact'
+get 'what', to: 'pages#what'
+get 'what.php', to: 'pages#what'
 
 resources :users
 get 'maintenance', to: 'orders#new'
