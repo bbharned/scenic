@@ -1,11 +1,16 @@
 class OrdersController < ApplicationController
 	before_action :require_user, only: [:index, :edit, :update, :destroy]
+	before_action :set_order, only: [:show, :edit, :update, :destroy]
 
 def index
 	@orders = Order.all
 end
 
-def new
+def show
+
+end
+
+def new #/maintenance
 	@order = Order.new
 	@locations = Location.all
 end
@@ -22,6 +27,26 @@ def create
     end 
 end
 
+def edit
+
+end
+
+def update
+	if @order.update(order_params)
+	  flash[:success] = "Order was successfully updated"
+	  redirect_to orders_path
+	else
+	  render 'edit'
+	end 
+end
+
+  
+def destroy
+	@order.destroy
+	flash[:danger] = "Order was successfully deleted"
+	redirect_to orders_path 
+end
+
 
 
 
@@ -30,6 +55,10 @@ private
 
 	def order_params
 		params.require(:order).permit(:facility_info, :location_id, :order_type, :emergency_lights, :requestor_name, :requestor_phone, :email, :comments, :completed)
+	end
+
+	def set_order
+		@order = Order.find(params[:id])
 	end
 
 

@@ -1,10 +1,8 @@
 <div class="container">
-	<h1 align="center" class="page-header">Hillborough County Maintenace Orders</h1>
+	<h1 class="page-header">Hillborough County Maintenance Orders</h1>
 	<hr />
 
-	<% @orders.each do |order| %>
-		<p><%= order.id %></p>
-	<% end %>
+	<%= render 'order' %>
 
 
 </div>
