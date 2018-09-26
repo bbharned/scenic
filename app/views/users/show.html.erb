@@ -1,18 +1,76 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-8">
-			<h1><%= @user.firstname %> <%= @user.lastname %></h1>
+			<h1>Welcome <%= @user.firstname %></h1>
 		</div>
 		<div class="col-md-4" align="right">
-		<%= link_to "Edit User", edit_user_path(@user), class: "btn btn-primary" %>
+			<% if current_user.id == @user.id || current_user.admin? %>
+				<%= link_to "Edit User", edit_user_path(@user), class: "btn btn-primary" %>
+			<% end %>
 	</div>
 	</div>
 	<hr />
 
+<div class="row">
+	<div class="col-md-12" align="center">
+		<h4><%= @user.firstname %> <%= @user.lastname %></h4>
+		<p class="bold" style="margin-bottom: 1px;"><%= @user.company %></p>
+		<p style="margin-bottom: 1px;"><%= @user.email %></p>
+		<p>Created at: <%= @user.created_at %></p>
+		<% if current_user.id == @user.id || current_user.admin? %>
+		<%= link_to "Edit", edit_user_path(@user), class: "badge badge-secondary" %>
+		<% end %>
+	</div>
+</div>
+<hr />
+<br />
+
+<div class="row">
+
+		<div class="col col-md-6">
+			<div class="well well-lg">
+				<h5 style="margin-bottom: 20px;">Latest Requests</h5>
+				<% @orderpreview.each do |preview| %>
+				
+					<p>ID:<%= preview.id %> - Request Type: <%= preview.order_type %></p>
+					<hr />
+				<% end %>
+				<div align="right"><%= link_to "All Orders", orders_path, class: "btn btn-primary" %></div>
+			</div>
+		</div>
+
+		<div class="col col-md-6">
+			<div class="well well-lg">
+				<h5 style="margin-bottom: 20px;">Locations</h5>
+				<% @locationpreview.each do |preview| %>
+			
+				<p><%= preview.name %> <%= preview.sc_type %><br />Requests Made: <%= preview.orders.count %></p>
+				<hr />
+			<% end %>
+			<div align="right"><%= link_to "All Locations", locations_path, class: "btn btn-primary" %></div>
+			</div>
+		</div>
+
+</div>
+		
+
+	
 
 
 
 
-<p><br /><br /><%= link_to "Back to Users", users_path, class: "btn btn-primary" %></p>
+
+
+	
+	
+
+
+<hr />
+
+<p align="center"><br /><%= link_to "View all Users", users_path, class: "btn btn-primary" %> 
+	<% if current_user.id == @user.id || current_user.admin? %>
+	| <%= link_to "Edit User", edit_user_path(@user), class: "btn btn-primary" %>
+	<% end %>
+</p>
 
 </div>

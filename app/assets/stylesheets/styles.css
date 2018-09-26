@@ -76,6 +76,27 @@ ul.pagination li.previous-page a {
 .bold {
 	font-weight: bold;
 }
+.well-lg {
+	padding:20px !important;
+}
+.well-lg p {
+	margin-bottom: 1px;
+}
+.order_view h5 {
+	margin-bottom: 0px;
+}
+.order_well {
+	padding:25px !important;
+}
+.is_complete {
+	width:150px; height: 38px; float:right; margin-right: 10px;
+}
+.is_complete img {
+	width:100%;
+}
+
+
+
 
 
 /******* HOMEPAGE ********/

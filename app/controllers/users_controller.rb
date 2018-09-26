@@ -30,7 +30,7 @@ end
 def update	
 	if @user.update(user_params)
 		flash[:success] = "User was successfully updated"
-		redirect_to users_path
+		redirect_to user_path(@user)
 	else
 		render 'edit'
 	end		
@@ -38,7 +38,9 @@ end
 
 
 def show
-	
+	@orders = Order.all
+	@orderpreview = Order.limit(4).order("id desc")
+	@locationpreview = Location.limit(3)
 end
 
 def destroy

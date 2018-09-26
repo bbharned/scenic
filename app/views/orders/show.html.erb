@@ -1,0 +1,56 @@
+<div class="container order_view">
+
+	<h1>Maintenance Order Request # &nbsp;&nbsp;<%= @order.id %></h1>
+
+	<hr />
+
+
+<div class="row">
+	<div class="col col-md-5">
+		<h4>Requested by:</h4>
+		<p><%= @order.requestor_name %><br /><%= @order.requestor_phone %><br /><%= @order.email %></p>
+		
+		<hr />
+		<br />
+		<%= form_for(@order, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+		<h4>Completed?</h4>
+		<div class="form-group">
+                <%= f.check_box :completed, method: :update, class: 'checkbox-inline input_checkbox' %>
+                &nbsp;&nbsp;<%= f.label "Check to complete Maintenance Request." %>?
+        </div>
+        <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<%= f.submit "Update Status", class: "btn btn-primary btn-sm" %>
+				</div>
+			</div>
+		<% end %>
+
+	</div>
+
+	<div class="col col-md-6 offset-md-1">
+		<div class="well order_well">
+		<h5>Location requested for:</h5>
+		<p><%= link_to "#{@order.location.name} #{@order.location.sc_type}", location_path(@order.location), style: "color:inherit; text-decoration:underline;" %></p>
+		<h5>Building Information:</h5>
+		<p><%= @order.location.name %> <%= @order.facility_info %> </p>
+		<h5>Maintenance Request Type</h5>
+		<p><%= @order.order_type %> </p>
+		<h5>Emergency Lighting?</h5>
+		<p><%= @order.emergency_lights %> </p>
+		
+	</div>
+	</div>
+
+</div>
+<hr />
+<br />
+<div class="row">
+	<div class="col">
+		<h5>Comments:</h5>
+		<p><%= @order.comments %> </p>
+	</div>
+</div>
+	
+	
+
+</div>

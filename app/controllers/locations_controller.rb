@@ -11,6 +11,8 @@ class LocationsController < ApplicationController
   
   def show
     @orders = @location.orders
+    @openorders = @location.orders.where(completed: false)
+    @closedorders = @location.orders.where(completed: true)
   end
 
   

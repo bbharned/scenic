@@ -1,17 +1,17 @@
 <div class="container">
-
+<div align="center">
 <p>
-  <strong>Scl ref:</strong>
+  <strong>Scl eference Number:</strong>
   <%= @location.scl_ref %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>School Name:</strong>
   <%= @location.name %>
 </p>
 
 <p>
-  <strong>Type:</strong>
+  <strong>School Type:</strong>
   <%= @location.sc_type %>
 </p>
 
@@ -25,14 +25,26 @@
   <%= @location.area %>
 </p>
 
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+<%= link_to 'Edit Location', edit_location_path(@location), class: "badge badge-secondary" %> |
+<%= link_to 'View All Locations', locations_path, class: "badge badge-secondary" %>
+
+</div>
 <br /><br />
 <hr />
 <br />
 
-<% if @orders.any? %>
+<% if @openorders.any? %>
 <h4>Open Maintenance Requests</h4><br />
-  <%= render 'orders/order' %>
+  <%= render 'orders/order', obj: @openorders %>
+<% else %>
+<h4>Open Maintenance Requests</h4>
+<p>&nbsp;&nbsp;There are no current pending Maintenance requests</p>
+<% end %>
+<br />
+<hr />
+<br />
+<% if @orders.any? %>
+<h4>Closed Maintenance Requests</h4><br />
+  <%= render 'orders/order', obj: @closedorders %>
 <% end %>
 </div>
