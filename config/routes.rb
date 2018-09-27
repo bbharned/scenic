@@ -10,6 +10,8 @@ get 'how', to: 'pages#how'
 get 'how.php', to: 'pages#how'
 get 'who', to: 'pages#who'
 get 'who.php', to: 'pages#who'
+get 'memdexcell', to: 'pages#memdexcell'
+get 'memdexcell.php', to: 'pages#memdexcell'
 
 
 resources :users #Website Users

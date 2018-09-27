@@ -94,6 +94,9 @@ ul.pagination li.previous-page a {
 .is_complete img {
 	width:100%;
 }
+.page-image {
+	width:100%; margin-top:55px; margin-bottom:55px;
+}
 
 
 
@@ -149,6 +152,9 @@ ul.pagination li.previous-page a {
 	}
 	.logged_badge {
 		display: none;
+	}
+	.page-image img {
+		width:100%; 
 	}
 }
 
