@@ -8,6 +8,8 @@ get 'what', to: 'pages#what'
 get 'what.php', to: 'pages#what'
 get 'how', to: 'pages#how'
 get 'how.php', to: 'pages#how'
+get 'who', to: 'pages#who'
+get 'who.php', to: 'pages#who'
 
 
 resources :users #Website Users

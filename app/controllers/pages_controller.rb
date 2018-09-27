@@ -28,6 +28,10 @@ def how
 
 end
 
+def who
+
+end
+
 
 
 
