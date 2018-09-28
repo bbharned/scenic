@@ -21,6 +21,8 @@ resources :users #Website Users
 resources :locations #HCPS locations
 get 'maintenance', to: 'orders#new'
 resources :orders, except: :new #HCPS Maintenance Requests
+get 'open', to: 'orders#open'
+get 'closed', to: 'orders#closed'
 
 #Site Sessions
 get 'login', to: 'sessions#new'

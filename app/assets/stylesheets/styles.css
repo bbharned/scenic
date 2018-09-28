@@ -152,6 +152,26 @@ ul.pagination li.previous-page a {
 
 
 
+/*************** Orders *****************/
+.orders-nav {
+	list-style:none; width:100%; margin-bottom: 45px; 
+	height:40px; padding-left: 0px !important;
+}
+.orders-nav li {
+	width:33.33%; text-align: center; float:left; height:40px;
+	border-right:1px solid #C1C1C1; line-height: 40px; 
+}
+.orders-nav li:last-child {
+	border-right:none;
+}
+.orders-nav li a {
+	color:inherit !important;
+}
+
+
+
+
+
 /********* Footer ***********/
 .foot-wrap {
 	background-color: #313131; color:#FFFFFF;

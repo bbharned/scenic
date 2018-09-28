@@ -12,7 +12,12 @@ def new
 end
 
 def edit
-	
+	if current_user.admin
+
+	elsif @user.id != current_user.id
+		flash[:danger] = "You are not allowed to edit this user"
+		redirect_to users_path
+	end
 end
 
 
@@ -39,7 +44,7 @@ end
 
 def show
 	@orders = Order.all
-	@orderpreview = Order.limit(4).order("id desc")
+	@orderpreview = Order.where(completed: false).limit(4).order("id desc")
 	@locationpreview = Location.limit(3)
 end
 

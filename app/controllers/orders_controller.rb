@@ -1,9 +1,17 @@
 class OrdersController < ApplicationController
-	before_action :require_user, only: [:index, :edit, :update, :destroy]
+	before_action :require_user, only: [:index, :open, :closed, :edit, :update, :destroy]
 	before_action :set_order, only: [:show, :edit, :update, :destroy]
 
 def index
-	@orders = Order.all
+	@orders = Order.all.order("id desc")
+end
+
+def open
+	@orders = Order.where(completed: false).order("id desc")
+end
+
+def closed
+	@orders = Order.where(completed: true).order("id desc")
 end
 
 def show

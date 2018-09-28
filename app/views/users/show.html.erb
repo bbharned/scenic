@@ -29,13 +29,13 @@
 
 		<div class="col col-md-6">
 			<div class="well well-lg">
-				<h5 style="margin-bottom: 20px;">Latest Requests</h5>
+				<h5 style="margin-bottom: 20px;">Open Requests</h5>
 				<% @orderpreview.each do |preview| %>
 				
 					<p>ID:<%= preview.id %> - Request Type: <%= preview.order_type %></p>
 					<hr />
 				<% end %>
-				<div align="right"><%= link_to "All Orders", orders_path, class: "btn btn-primary" %></div>
+				<div align="right"><%= link_to "All Open Orders", open_path, class: "btn btn-primary" %></div>
 			</div>
 		</div>
 
