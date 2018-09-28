@@ -13,10 +13,10 @@
 		<hr />
 		<br />
 		<%= form_for(@order, :html => {class: "form-horizontal", role: "form"}) do |f| %>
-		<h4>Completed?</h4>
+		<h4>Request Completed?</h4>
 		<div class="form-group">
                 <%= f.check_box :completed, method: :update, class: 'checkbox-inline input_checkbox' %>
-                &nbsp;&nbsp;<%= f.label "Check to complete Maintenance Request." %>?
+                &nbsp;&nbsp;<%= f.label "Check and Update to complete" %>
         </div>
         <div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">

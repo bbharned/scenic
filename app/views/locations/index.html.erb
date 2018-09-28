@@ -33,6 +33,12 @@
     <% @locations.each do |location| %>
     
       <div class="well location-sum">
+         <% if location.orders.any? %>
+            <% @oos = location.orders.where(completed: false) %>
+            <% if @oos.any? %>
+              <div class="order-number"><span><%= @oos.count %></span></div>
+            <% end %>
+         <% end %>
          <div class="row">
           <div class="col-md-3" style="text-decoration:underline;"><%= link_to "#{location.name}", location_path(location), style: "color:inherit;" %></div>
           <div class="col-md-6"><%= location.address %></div>
