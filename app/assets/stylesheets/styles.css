@@ -132,6 +132,53 @@ ul.pagination li.previous-page a {
 .logged_badge {
 	position: absolute; opacity: .2; top: 12px; margin-left: 38px; font-style: italic;
 }
+.image-fill {
+	position: relative; height:100%; width: 100%;
+}
+.first-span {
+	padding-top: 70px; padding-bottom: 100px;
+} 
+.first-span h1 {
+	margin-bottom: 30px;
+}
+.image-fill img {
+	width:100%;
+}
+.dont-underline:hover {
+	text-decoration: none !important;
+}
+.second-span {
+	min-height: 450px;
+	margin-bottom: 0px !important; 
+}
+.hp-left-box, .hp-right-box {
+	text-align: center; padding-top: 45px; padding-bottom: 65px;
+}
+.hp-left-box {
+	background-size:cover; color: #FFFFFF;
+	background-blend-mode: all;
+}
+.hp-left-box p {
+	padding-left: 5%; padding-right: 5%;
+}
+.hp-right-box {
+	background-color: #272727; color:#FFFFFF;
+	/*background-image: linear-gradient(#272727, #000000);*/
+	background-size: contain; background-repeat: no-repeat;
+	background-position: right;
+}
+.hp-right-box h2 {
+	margin-bottom: 35px; margin-top: 20px;
+}
+.hp-right-box p {
+	padding-left: 15%; padding-right: 15%;
+	font-size: 1.25em; color:#f1f1f1;
+}
+.sharedsavings-logo {
+	width:100%; max-width: 300px;
+}
+.sharedsavings-logo img {max-width: 250px;}
+
 
 
 
@@ -192,7 +239,7 @@ ul.pagination li.previous-page a {
 	padding-left: 2.5%; padding-right: 2.5%;
 }
 .right-foot p {
-	color:#919191; padding-top: 35px;
+	color:#919191; padding-top: 15px;
 	font-size: 1.35em;
 }
 .foot-nav {
@@ -260,6 +307,10 @@ ul.pagination li.previous-page a {
 	}
 	span.copyright {
 		width:100% !important; text-align: center !important; 
+	}
+	.hp-right-box p {
+		padding-left: 5%; padding-right: 5%;
+		font-size: 1.25em; 
 	}
 }
 

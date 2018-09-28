@@ -7,4 +7,13 @@ $navbar-border-radius: 0px;
 	/*background-blend-mode: luminosity; */
 }
 
+.hp-left-box {
+	background-image: asset-url('bg_blur.jpg');
+}
+
+.hp-right-box {
+	background-image: asset-url('bg-minimise-bulb.png');
+}
+
+
 @import "bootstrap";

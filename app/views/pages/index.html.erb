@@ -3,10 +3,38 @@
   <div class="container">
     <h1 class="display-4">Energy Efficiency</h1>
     <p class="lead">Modern &amp; Smart.<br /><span>Today's Efficient Energy Technology Can&nbsp;be&nbsp;Yours.</span></p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
+    <%= link_to "Learn More", about_path, class: "tn btn-primary btn-lg dont-underline" %>
   </div>
 </div>
 </div>
 <div class="container">
-	
+	<div class="row first-span">
+		<div class="col-md-7">
+			<h1>Enery Solutions Made Simple</h1>
+			<p>Minimise uses an internationally recognized and standardized protocol (IPMVP) to define and identify baseline usage patterns from which the savings are calculated.</p>
+			<p>Minimise identifies technology, and processes to maximize the efficiency and the savings. All the while without any disruption to your normal operation of business.</p>
+			<p>Once the strategy is identified, we oversee the implementation process from start to finish. The best technology at ZERO cost and no disruption to your company.</p>
+			<p>Minimise monitors & analyzes key consumption Indicators via Smart Meters, which are part of a long term strategy for monitoring, improving and sustaining benefits.</p>
+		</div>
+		<div class="col-md-5">
+			<div class="image-fill">
+				<%= image_tag("hp_span1_img.png") %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row second-span">
+		<div class="col-md-6 hp-left-box">
+			<span class="sharedsavings-logo"><%= image_tag("shared-savings-logo.png") %></span>
+			<p style="margin-top: 20px; margin-bottom: 30px;">At zero cost to the client and positively no disruption to your business, Minimise USA will spare no expense to employ its portfolio of state of the art energy efficiency technologies to achieve a maximum of savings.</p>
+			<%= link_to "Learn More", about_path, class: "tn btn-primary btn-lg dont-underline" %>
+		</div>
+		<div class="col-md-6 hp-right-box">
+			<h2>Who is Minimise?</h2>
+			<p>At MINIMISE our expertise span the spectrum of entrepreneurship from the worlds of sustainability, alternative energy, retail construction, project management, structured finance and sales.</p>
+			<p style="margin-bottom: 30px;">All of our services are provided for FREE as part of structured Shared Savings Plan. With MINIMISE, everyone wins!</p>
+			<%= link_to "Meet the Team", who_path, class: "tn btn-primary btn-lg dont-underline" %>
+		</div>
+	</div>
 </div>
