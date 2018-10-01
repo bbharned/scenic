@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <div align="center" style="max-width: 600px; margin:auto;">
+      <br /><br />
+      <img src="http://www.bryanharned.com/images/minimisesign.jpg" width="500" /><br /><br />
+      <h4 style="margin-bottom: 0px;">Thank You For Submitting your Maintenace Request</h4>
+      <h1 style="margin-top: 4px; margin-bottom: 35px;">Request Number# <%= @order.id %></h1>
+      
+
+      <p>We will be in contact with you in the next 24 hours.</p>
+      <br /><br />
+      <hr />
+      <br />
+      
+      
+          <h2>Request Details:</h2>
+          <h3 style="margin-bottom: 3px;">Location: <br /><%= @order.location.name %> <%= @order.location.sc_type %></h3>
+          <h3 style="margin-bottom: 3px;">Requestor Name: <br /><%= @order.requestor_name %></h3>
+          <h3 style="margin-bottom: 3px;">Requestor Phone: <br /><%= @order.requestor_phone %></h3>
+          <h3>Requestor Email: <br /><%= @order.email %></h3>
+
+          <h3 style="margin-bottom: 3px;">Request Type: <br /><%= @order.order_type %></h3>
+          <h3 style="margin-bottom: 3px;">Facility Information: <br /><%= @order.facility_info %></h3>
+          <h3 style="margin-bottom: 3px;">Emergency Lighting?<br /><%= @order.emergency_lights %></h3>
+          <h3>Date Created: <%= @order.created_at %></h3>
+
+          <h3 style="margin-bottom: 3px;">Request Comments:<br /><%= @order.comments %></h3>
+      
+      
+      <br /><br />
+      <hr />
+      <br />
+      <p style="max-width:500px; padding: 0px 20px; font-size: .9em;">If for any reason you did not intend to submit a maintenance request,<br />please <a href="mailto:maintenance@minimiseusa.com">contact&nbsp;us</a>.</p>
+    </div>
+  </body>
+</html>
