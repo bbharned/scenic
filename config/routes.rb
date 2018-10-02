@@ -12,6 +12,8 @@ get 'who', to: 'pages#who'
 get 'who.php', to: 'pages#who'
 get 'memdexcell', to: 'pages#memdexcell'
 get 'memdexcell.php', to: 'pages#memdexcell'
+get 'more', to: 'pages#more'
+get 'more.php', to: 'pages#more'
 
 
 resources :users #Website Users

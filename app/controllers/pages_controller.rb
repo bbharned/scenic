@@ -38,4 +38,10 @@ class PagesController < ApplicationController
 
 	end
 
+
+	def more
+
+	end
+
+
 end

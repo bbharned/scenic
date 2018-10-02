@@ -240,6 +240,17 @@ ul.pagination li.previous-page a {
 
 
 
+/******************** More page *********************/
+.card-img-top {
+	text-align: center; margin-top: 25px;
+}
+.card-img-top img {
+	max-width: 75px;
+}
+
+
+
+
 
 /********* Footer ***********/
 .foot-wrap {
