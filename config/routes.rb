@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
 root 'pages#index'
 get 'about', to: 'pages#about'
-get 'contact', to: 'pages#contact'
+get 'contact', to: 'contacts#new'
+#post 'contact', to: 'pages#email'
+resources :contacts, except: [:new, :index, :edit, :destroy]
 get 'what', to: 'pages#what'
 get 'what.php', to: 'pages#what'
 get 'how', to: 'pages#how'

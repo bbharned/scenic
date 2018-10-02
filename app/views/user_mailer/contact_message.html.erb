@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <div align="center" style="max-width: 600px; margin:auto;">
+      <br /><br />
+      
+      <img src="http://www.bryanharned.com/images/minimisesign.jpg" width="500" /><br /><br />
+      
+      <h4>We have received a contact message from the website</h4>
+      
+      <br /><br />
+      <hr />
+      <br />
+      
+      
+          <h2>Contact Details:</h2>
+          <h3 style="margin-bottom: 3px;">Name: <br /><%= @contact.name %></h3>
+          <h3 style="margin-bottom: 3px;">Contact Email: <br /><%= @contact.email %></h3>
+          <h3 style="margin-bottom: 3px;">Contact Phone: <br /><%= @contact.phone %></h3>
+          <h3>Contact Organization: <br /><%= @contact.organization %></h3>
+
+         
+          
+
+          <h3 style="margin-bottom: 3px;">Message Received:<br /><%= @contact.message %></h3>
+      
+      
+      <br /><br />
+      <hr />
+      <br />
+      <p style="max-width:500px; padding: 0px 20px; font-size: .9em;">If for any reason you think you received this message in error,<br />please <a href="mailto:info@minimiseusa.com">contact&nbsp;us</a>.</p>
+    </div>
+  </body>
+</html>

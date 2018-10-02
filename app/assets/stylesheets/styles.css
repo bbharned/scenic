@@ -252,6 +252,13 @@ ul.pagination li.previous-page a {
 }
 
 
+/****************** Contact Page *********************/
+.contact-card {
+	background-size: contain; background-repeat: no-repeat;
+	background-position: right;
+}
+
+
 
 
 
