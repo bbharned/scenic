@@ -37,6 +37,14 @@ class PagesController < ApplicationController
 	end
 
 
+	def glossary
+
+	end
+
+
+	def faq
+
+	end
 
 	
 

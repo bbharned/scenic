@@ -18,6 +18,10 @@ get 'memdexcell', to: 'pages#memdexcell'
 get 'memdexcell.php', to: 'pages#memdexcell'
 get 'more', to: 'pages#more'
 get 'more.php', to: 'pages#more'
+get 'glossary', to: 'pages#glossary'
+get 'glossary.php', to: 'pages#glossary'
+get 'faq', to: 'pages#faq'
+get 'faq.php', to: 'pages#faq'
 
 
 resources :users #Website Users
