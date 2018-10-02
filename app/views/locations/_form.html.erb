@@ -1,33 +1,83 @@
+
 <%= render 'shared/errors', obj: @location %>
 
-<%= form_for(location) do |f| %>
-
-  <div class="field">
-    <%= f.label :scl_ref %>
-    <%= f.text_field :scl_ref %>
-  </div>
-
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label "School Type" %>
-    <%= f.text_field :sc_type %>
-  </div>
-
-  <div class="field">
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-  </div>
-
-  <div class="field">
-    <%= f.label :area %>
-    <%= f.text_field :area %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<% if @location.errors.any? %>
+<h2>The following errors prevented user creation</h2>
+<ul style="margin-bottom: 50px;">
+  <% @location.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
 <% end %>
+
+<div class="row">
+  <div class="col-sm-12">
+    <%= form_for(@location, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+      <div class="form-group">
+        <div class="row">
+        <div class="col col-md-4">
+          <div class="control-label col-sm-6">
+            <%= f.label "Ref #", style: "font-weight:bold;" %>
+          </div>
+          <div class="col-md-12">
+            <%= f.text_field :scl_ref, class: "form-control", placeholder: "Reference Number", autofocus: true %>
+          </div>
+        </div>
+        <div class="col">
+          <div class="control-label col-sm-12">
+            <%= f.label "School Name", style: "font-weight:bold;" %>
+          </div>
+          <div class="col-md-12">
+            <%= f.text_field :name, class: "form-control", placeholder: "School Name" %>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col col-md-3">
+            <div class="control-label col-md-12">
+              <%= f.label "School Type", style: "font-weight:bold;" %>
+            </div>
+            <div class="col-md-12">
+              <%= f.text_field :sc_type, class: "form-control", placeholder: "i.e. Middle School, High School" %>
+            </div>
+          </div>
+          <div class="col col-md-9">
+            <div class="control-label col-md-12">
+              <%= f.label "School Address", style: "font-weight:bold;" %>
+            </div>
+            <div class="col-md-12">
+              <%= f.text_field :address, class: "form-control", placeholder: "Address" %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+           <div class="col col-md-2">
+            <div class="control-label col-md-12">
+              <%= f.label "Area", style: "font-weight:bold;" %>
+            </div>
+            <div class="col-md-12">
+              <%= f.text_field :area, class: "form-control", placeholder: "Area" %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <br />
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= f.submit(@location.new_record? ? "Create New Location" : "Update Location", class: "btn btn-primary btn-lg") %>
+        </div>
+      </div>
+      <br /><br />
+      <hr />
+    <% end %>
+  </div>
+</div>
+
+
