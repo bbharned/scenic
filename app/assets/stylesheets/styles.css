@@ -87,6 +87,9 @@ ul.pagination li.previous-page a {
 .well-lg p {
 	margin-bottom: 1px;
 }
+.order_view {
+	padding-bottom: 100px;
+}
 .order_view h5 {
 	margin-bottom: 0px;
 }

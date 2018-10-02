@@ -13,7 +13,7 @@ class PagesController < ApplicationController
 
 
 	def contact
-
+		@email = Email.new(set_contact)
 	end
 
 
@@ -42,6 +42,15 @@ class PagesController < ApplicationController
 	def more
 
 	end
+
+
+
+	private
+
+		def set_contact
+			params.require(:email).permit(:name, :email, :phone, :organization, :message)
+		end
+
 
 
 end
