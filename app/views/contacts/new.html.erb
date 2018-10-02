@@ -22,7 +22,7 @@
         <div class="row">
         <div class="col-md-12">
           <div class="control-label col-sm-12">
-            <%= f.label "Name", style: "font-weight:bold;" %>
+            <%= f.label "Name *", style: "font-weight:bold;" %>
           </div>
           <div class="col-md-12">
             <%= f.text_field :name, class: "form-control", placeholder: "Enter Name", autofocus: true %>
@@ -35,7 +35,7 @@
         <div class="row">
         <div class="col-md-12">
           <div class="control-label col-sm-12">
-            <%= f.label "Email", style: "font-weight:bold;" %>
+            <%= f.label "Email *", style: "font-weight:bold;" %>
           </div>
           <div class="col-md-12">
             <%= f.text_field :email, class: "form-control", placeholder: "Email Address" %>
@@ -49,7 +49,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="control-label col-md-12">
-              <%= f.label "Phone Number", style: "font-weight:bold;" %>
+              <%= f.label "Phone Number *", style: "font-weight:bold;" %>
             </div>
             <div class="col-md-12">
               <%= f.text_field :phone, class: "form-control", placeholder: "Enter Phone Number" %>
@@ -62,10 +62,10 @@
         <div class="row">
           <div class="col-md-12">
             <div class="control-label col-md-12">
-              <%= f.label "Organization/business", style: "font-weight:bold;" %>
+              <%= f.label "Organization/business *", style: "font-weight:bold;" %>
             </div>
             <div class="col-md-12">
-              <%= f.text_field :organization, class: "form-control", placeholder: "Enter you Organization" %>
+              <%= f.text_field :organization, class: "form-control", placeholder: "Enter Your Organization" %>
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@
         <div class="row">
            <div class="col-md-12">
             <div class="control-label col-md-12">
-              <%= f.label "Message.Comment", style: "font-weight:bold;" %>
+              <%= f.label "Message.Comment *", style: "font-weight:bold;" %>
             </div>
             <div class="col-md-12">
               <%= f.text_area :message, rows: 10, class: "form-control", placeholder: "Enter Your Message Here" %>
@@ -109,6 +109,15 @@
         <br /><br />
         <h5 class="card-title">Email Us</h5>
         <p class="card-text"><%= link_to "info@minimiseusa.com", "mailto:info@minimiseusa.com" %></p>
+      </div>
+    </div>
+
+    <div class="card bg-light col-md-11 offset-md-1">
+      <div class="card-body">
+        <h5 class="card-title">Hillsborough County Public Schools</h5>
+        <p class="card-text">If you are an employee of HCPS, please sumbit a maintenance request here.</p>
+        
+        <p class="card-text"><%= link_to "Maintenance Requests", maintenance_path %></p>
       </div>
     </div>
   </div>
