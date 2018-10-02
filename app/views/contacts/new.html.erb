@@ -5,14 +5,6 @@
   <h5>Simply fill out the form</h5>
 	<%= render 'shared/errors', obj: @contact %>
 
-	<% if @contact.errors.any? %>
-	<h2>The following errors prevented user creation</h2>
-	<ul style="margin-bottom: 50px;">
-	  <% @contact.errors.full_messages.each do |msg| %>
-	    <li><%= msg %></li>
-	  <% end %>
-	</ul>
-	<% end %>
 
 	<div class="row">
   <div class="col-md-6">
@@ -115,7 +107,7 @@
     <div class="card bg-light col-md-11 offset-md-1">
       <div class="card-body">
         <h5 class="card-title">Hillsborough County Public Schools</h5>
-        <p class="card-text">If you are an employee of HCPS, please sumbit a maintenance request here.</p>
+        <p class="card-text">If you are an employee of HCPS, please sumbit a maintenance request.</p>
         
         <p class="card-text"><%= link_to "Maintenance Requests", maintenance_path %></p>
       </div>
