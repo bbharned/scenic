@@ -46,6 +46,11 @@ class PagesController < ApplicationController
 
 	end
 
+
+	def ssp
+
+	end
+
 	
 
 
