@@ -23,6 +23,8 @@ get 'glossary.php', to: 'pages#glossary'
 get 'faq', to: 'pages#faq'
 get 'faq.php', to: 'pages#faq'
 get 'ssp', to: 'pages#ssp'
+get 'focus', to: 'pages#focus'
+get 'focus.php', to: 'pages#focus'
 
 
 resources :users #Website Users

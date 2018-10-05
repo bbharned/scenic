@@ -51,6 +51,10 @@ class PagesController < ApplicationController
 
 	end
 
+	def focus
+
+	end
+
 	
 
 
