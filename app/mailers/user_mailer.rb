@@ -12,7 +12,7 @@ class UserMailer < ApplicationMailer
                          authentication: 'plain',
                          enable_starttls_auto: true
                           }
-    mail(to: @order.email, from: 'Minimise - HCPS', subject: 'Maintenance Request Confirmation', delivery_method_options: delivery_options)
+    mail(to: 'maintenance@minimiseusa.com', from: 'Minimise - HCPS', subject: 'Maintenance Request Confirmation', delivery_method_options: delivery_options)
   end
 
   def contact_message(contact)
@@ -24,13 +24,13 @@ class UserMailer < ApplicationMailer
                          authentication: 'plain',
                          enable_starttls_auto: true
                           }
-    mail(to: 'bbharned@me.com', from: 'Minimise Contact Form', subject: 'Minimise Contact Form', delivery_method_options: delivery_options)
+    mail(to: 'info@minimiseusa.com', from: 'Minimise Contact Form', subject: 'Minimise Contact Form', delivery_method_options: delivery_options)
   end
 
 
   
   private
       def password
-        password = "maintenanceuser"
+        password = "maintenanceusa"
       end
 end
