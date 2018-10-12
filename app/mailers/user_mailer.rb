@@ -31,6 +31,6 @@ class UserMailer < ApplicationMailer
   
   private
       def password
-        password = "NqdKAATG8MLn?6"
+        password = "maintenanceuser"
       end
 end
