@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'bharned@thinmanager.com'
+  default from: 'maintenance@minimiseusa.com'
   layout 'mailer'
 end

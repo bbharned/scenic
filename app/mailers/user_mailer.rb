@@ -7,8 +7,7 @@ class UserMailer < ApplicationMailer
     @location = location
     delivery_options = { address: 'smtp.gmail.com',
                          port: 587,
-                         #user_name: 'maintenance@minimiseusa.com',
-                         user_name: 'bharned@thinmanager.com',
+                         user_name: 'maintenance@minimiseusa.com',
                          password: password,
                          authentication: 'plain',
                          enable_starttls_auto: true
@@ -20,20 +19,18 @@ class UserMailer < ApplicationMailer
     @contact = contact
     delivery_options = { address: 'smtp.gmail.com',
                          port: 587,
-                         #user_name: 'maintenance@minimiseusa.com',
-                         user_name: 'bharned@thinmanager.com',
+                         user_name: 'maintenance@minimiseusa.com',
                          password: password,
                          authentication: 'plain',
                          enable_starttls_auto: true
                           }
-    mail(to: "bbharned@me.com", from: 'Minimise Contact Form', subject: 'Minimise Contact Form', delivery_method_options: delivery_options)
+    mail(to: 'bbharned@me.com', from: 'Minimise Contact Form', subject: 'Minimise Contact Form', delivery_method_options: delivery_options)
   end
 
 
   
   private
       def password
-        #password = "NqdKAATG8MLn?6"
-        password = "Corv3tt3"
+        password = "NqdKAATG8MLn?6"
       end
 end

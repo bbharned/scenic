@@ -40,7 +40,7 @@
             <% end %>
          <% end %>
          <div class="row">
-          <div class="col-md-3" style="text-decoration:underline;"><%= link_to "#{location.name}", location_path(location), style: "color:inherit;" %></div>
+          <div class="col-md-3" style="text-decoration:underline;"><%= link_to "#{location.name} #{location.sc_type}", location_path(location), style: "color:inherit;" %></div>
           <div class="col-md-6"><%= location.address %></div>
           <% if current_user.admin? %>
             <div class="col-md-1"><%= link_to 'Show', location %></div>

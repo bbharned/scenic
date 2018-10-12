@@ -28,7 +28,7 @@ Rails.application.configure do
   config.assets.compile = false #was false, changed to make images load from CSS
 
   
-config.action_mailer.default_url_options = { :host => "minimiseusa.com" }
+  config.action_mailer.default_url_options = { :host => "minimiseusa.com" }
 
   config.serve_static_assets = true
   config.assets.digest = true
