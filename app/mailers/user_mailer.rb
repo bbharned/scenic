@@ -5,6 +5,7 @@ class UserMailer < ApplicationMailer
   def maintenance_confirmation(order, location)
     @order = order
     @location = location
+    @recipients = "#{@order.email}, maintenance@minimiseusa.com, sean.ewais@minimiseusa.com, alexandra.isaac@minimiseusa.com, bbharned@me.com"
     delivery_options = { address: 'smtp.gmail.com',
                          port: 587,
                          user_name: 'maintenance@minimiseusa.com',
@@ -12,11 +13,12 @@ class UserMailer < ApplicationMailer
                          authentication: 'plain',
                          enable_starttls_auto: true
                           }
-    mail(to: 'maintenance@minimiseusa.com', from: 'Minimise - HCPS', subject: 'Maintenance Request Confirmation', delivery_method_options: delivery_options)
+    mail(to: @recipients, from: 'Minimise - HCPS', subject: 'Maintenance Request Confirmation', delivery_method_options: delivery_options)
   end
 
   def contact_message(contact)
     @contact = contact
+    @recipients = "info@minimiseusa.com"
     delivery_options = { address: 'smtp.gmail.com',
                          port: 587,
                          user_name: 'maintenance@minimiseusa.com',
@@ -24,7 +26,7 @@ class UserMailer < ApplicationMailer
                          authentication: 'plain',
                          enable_starttls_auto: true
                           }
-    mail(to: 'info@minimiseusa.com', from: 'Minimise Contact Form', subject: 'Minimise Contact Form', delivery_method_options: delivery_options)
+    mail(to: @recipients, from: 'Minimise Contact Form', subject: 'Minimise Contact Form', delivery_method_options: delivery_options)
   end
 
 
