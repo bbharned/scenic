@@ -24,7 +24,7 @@ def new #/maintenance
 end
 
 def create
-	@locations = Location.all
+	@locations = Location.all.order(:name)
 	@order = Order.new(order_params)
     if @order.save
       UserMailer.maintenance_confirmation(@order, @order.location).deliver_now

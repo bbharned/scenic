@@ -5,7 +5,7 @@ class LocationsController < ApplicationController
   
   def index
     #paginaton needed
-    @locations = Location.paginate(page: params[:page], per_page: 10)
+    @locations = Location.paginate(page: params[:page], per_page: 10).order(:name)
   end
 
 
