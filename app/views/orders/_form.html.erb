@@ -14,7 +14,7 @@
 					    </div>
 					    <div class="col-sm-12" align="center">
 							
-							<%= select(:order, :location_id, Location.all.collect {|l| [ "#{l.name} - #{l.address} - #{l.sc_type}", l.id ] }, { include_blank: true, class: "form-control" }) %>
+							<%= select(:order, :location_id, Location.all.order("name asc").collect {|l| [ "#{l.name} - #{l.address} - #{l.sc_type}", l.id ] }, { include_blank: true, class: "form-control" }) %>
 							
 
 							

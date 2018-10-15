@@ -20,7 +20,7 @@ end
 
 def new #/maintenance
 	@order = Order.new
-	@locations = Location.all.order("name desc")
+	@locations = Location.all
 end
 
 def create
