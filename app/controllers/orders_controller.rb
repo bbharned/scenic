@@ -28,7 +28,7 @@ def create
 	@order = Order.new(order_params)
     if @order.save
       UserMailer.maintenance_confirmation(@order, @order.location).deliver_now
-      flash[:success] = "Your maintenance request has been submitted.  Your Maintenance Order number is #{@order.id}.  We will be in touch shortly, within 24 hours.  Your maintenace request details have been emailed to you."
+      flash[:success] = "Your maintenance request has been submitted.  Your Maintenance Order number is #{formatted_number(@order.id)}.  We will be in touch shortly, within 24 hours.  Your maintenace request details have been emailed to you."
       redirect_to maintenance_path
     else
       flash[:danger] = "There seems to have been a problem submitting your work order.  Please check the errors listed below and try again."

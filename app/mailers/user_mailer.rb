@@ -5,6 +5,7 @@ class UserMailer < ApplicationMailer
   def maintenance_confirmation(order, location)
     @order = order
     @location = location
+    @onumber = formatted_number(@order.id)
     @recipients = "#{@order.email}, maintenance@minimiseusa.com, sean.ewais@minimiseusa.com, alexandra.isaac@minimiseusa.com, bbharned@me.com"
     delivery_options = { address: 'smtp.gmail.com',
                          port: 587,
@@ -34,5 +35,9 @@ class UserMailer < ApplicationMailer
   private
       def password
         password = "maintenanceusa"
+       end
+
+      def formatted_number(int)
+        format '%04d', int
       end
 end

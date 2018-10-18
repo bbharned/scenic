@@ -4,7 +4,7 @@
 	<div class="row">
 
 		<div class=" col col-sm-10">
-			<span class="bold">Request Number:&nbsp;&nbsp;&nbsp;</span><%= order.id %><br />
+			<span class="bold">Request Number:&nbsp;&nbsp;&nbsp;</span><%= formatted_number(order.id) %><br />
 			<span class="bold">Request Type:&nbsp;&nbsp;&nbsp;</span><%= order.order_type %><br />
 			<span class="bold">Emergency Lighting:&nbsp;&nbsp;&nbsp;</span><%= order.emergency_lights %>
 		</div>
