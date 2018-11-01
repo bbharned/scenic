@@ -51,11 +51,21 @@ class PagesController < ApplicationController
 
 	end
 
+
 	def focus
 
 	end
 
+
+	def achievements
+
+	end
 	
+
+	def why
+
+	end
+
 
 
 end

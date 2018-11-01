@@ -6,6 +6,7 @@ get 'about', to: 'pages#about'
 get 'giving', to: 'pages#about'
 get 'giving.php', to: 'pages#about'
 get 'contact', to: 'contacts#new'
+get 'achievements', to: 'pages#achievements'
 #post 'contact', to: 'pages#email'
 resources :contacts, except: [:new, :index, :edit, :destroy]
 get 'what', to: 'pages#what'
@@ -25,6 +26,7 @@ get 'faq.php', to: 'pages#faq'
 get 'ssp', to: 'pages#ssp'
 get 'focus', to: 'pages#focus'
 get 'focus.php', to: 'pages#focus'
+get 'why', to: 'pages#why'
 
 
 resources :users #Website Users

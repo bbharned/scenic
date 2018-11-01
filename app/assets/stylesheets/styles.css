@@ -151,23 +151,24 @@ ul.pagination li.previous-page a {
 	text-decoration: none !important;
 }
 .second-span {
-	min-height: 450px;
+	/*min-height: 450px;*/
 	margin-bottom: 0px !important; 
 }
 .hp-left-box, .hp-right-box {
-	text-align: center; padding-top: 45px; padding-bottom: 65px;
+	/*text-align: center; */padding-top: 45px; padding-bottom: 45px;
 }
 .hp-left-box {
 	background-size:cover; color: #FFFFFF;
 	background-blend-mode: all;
 }
 .hp-left-box p {
-	padding-left: 5%; padding-right: 5%;
+	font-size:1.25em;
 }
+/*
 .hp-right-box {
 	background-color: #272727; color:#FFFFFF;
 	/*background-image: linear-gradient(#272727, #000000);*/
-	background-size: contain; background-repeat: no-repeat;
+	/*background-size: contain; background-repeat: no-repeat;
 	background-position: right;
 }
 .hp-right-box h2 {
@@ -176,11 +177,11 @@ ul.pagination li.previous-page a {
 .hp-right-box p {
 	padding-left: 15%; padding-right: 15%;
 	font-size: 1.25em; color:#f1f1f1;
+}*/
+.prepaid-logo {
+	max-width:400px; margin:auto;
 }
-.sharedsavings-logo {
-	width:100%; max-width: 300px;
-}
-.sharedsavings-logo img {max-width: 250px;}
+.prepaid-logo img {width: 100%;}
 
 
 
@@ -354,6 +355,9 @@ ul.pagination li.previous-page a {
 	.hp-right-box p {
 		padding-left: 5%; padding-right: 5%;
 		font-size: 1.25em; 
+	}
+	.centerSooner {
+		text-align: center !important
 	}
 }
 
