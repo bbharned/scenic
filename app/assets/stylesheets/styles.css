@@ -272,11 +272,13 @@ ul.pagination li.previous-page a {
 }
 
 
-/****************** Achievement Page *******************/
+/****************** Achievement & Why Page *******************/
 .achievement-list li {
 	margin-bottom: 12px;
 }
-
+.big_bold {
+	font-size: 1.3em; font-style: italic; font-weight: bold;
+}
 
 
 
