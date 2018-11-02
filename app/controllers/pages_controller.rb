@@ -67,5 +67,10 @@ class PagesController < ApplicationController
 	end
 
 
+	def cases
+
+	end
+
+
 
 end

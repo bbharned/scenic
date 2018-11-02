@@ -27,6 +27,7 @@ get 'ssp', to: 'pages#ssp'
 get 'focus', to: 'pages#focus'
 get 'focus.php', to: 'pages#focus'
 get 'why', to: 'pages#why'
+get 'cases', to: 'pages#cases'
 
 
 resources :users #Website Users
