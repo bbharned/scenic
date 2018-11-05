@@ -111,9 +111,12 @@ ul.pagination li.previous-page a {
 
 
 /******* HOMEPAGE ********/
+
+
 .hp-video {
 	position: relative; width:100%; background-color: #272727;
 }
+
 .hp-video img {
 	width:100%; top: -25px; margin-bottom:-10px; z-index: 1; background-size: cover;
 }
