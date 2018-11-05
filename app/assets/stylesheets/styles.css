@@ -121,10 +121,10 @@ ul.pagination li.previous-page a {
 	width:100%; top: -25px; margin-bottom:-10px; z-index: 1; background-size: cover;
 }
 .hp-video video {
-	width:100%; top: -25px; margin-bottom:-10px; z-index: 1; background-size: cover;
+	 position:relative; width:100%; top:0px; margin-bottom:-10px; z-index: 1; 
 }
 .hp-heading {
-	position: absolute; color:#272727;
+	position: absolute; color:#272727; z-index: 100;
 	font-weight:lighter;
 	font-style: italic; top:55px;
 	padding: 25px 5%; width:100%; max-width: 800px;
