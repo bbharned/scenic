@@ -111,7 +111,20 @@ ul.pagination li.previous-page a {
 
 
 /******* HOMEPAGE ********/
-
+.hp-video {
+	position: relative; width:100%; background-color: #272727;
+}
+.hp-video video {
+	width:100%; top: -25px; margin-bottom:-10px; z-index: 1; background-size: cover;
+}
+.hp-heading {
+	position: absolute; color:#272727;
+	font-weight:lighter;
+	font-style: italic; top:55px;
+	padding: 25px 5%; width:100%; max-width: 800px;
+	background-color: rgba(255,255,255,0.50);
+	font-size: 2.5em; 
+}
 .jumbo-splash {
 	width:100%; margin-bottom: 45px;
 }
@@ -285,7 +298,7 @@ ul.pagination li.previous-page a {
 
 /********* Footer ***********/
 .foot-wrap {
-	background-color: #313131; color:#FFFFFF;
+	background-color: #272727; color:#FFFFFF;
 	padding-top: 45px; padding-bottom: 25px; 
 }
 .foot-logo {
@@ -378,6 +391,10 @@ ul.pagination li.previous-page a {
 	}
 	.centerSooner {
 		text-align: center !important
+	}
+	.hp-heading {
+		text-align: center; max-width: inherit;
+		font-size: 1.75em; 
 	}
 }
 
