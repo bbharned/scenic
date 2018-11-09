@@ -152,7 +152,7 @@ ul.pagination li.previous-page a {
 	background-color:green;
 }
 .water-mark {
-	width:100px; position: absolute; bottom:50px; right: 25px; z-index: 5;
+	width:100px; position: absolute; bottom:50px; right: 5%; z-index: 5;
 }
 .logged_badge {
 	position: absolute; opacity: .2; top: 12px; margin-left: 38px; font-style: italic;
@@ -165,6 +165,9 @@ ul.pagination li.previous-page a {
 } 
 .first-span h1 {
 	margin-bottom: 30px;
+}
+.first-span p {
+	font-size: 1.2em;
 }
 .image-fill img {
 	width:100%;
