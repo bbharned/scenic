@@ -124,11 +124,11 @@ ul.pagination li.previous-page a {
 	 position:relative; width:100%; top:0px !important; z-index: 1; 
 }
 .hp-heading {
-	position: absolute; color:#272727; z-index: 100;
-	font-weight:lighter;
-	font-style: italic; top:55px;
+	position: absolute; color:#a5cb3a; z-index: 100;
+	font-weight:bold;
+	font-style: italic; bottom:55px;
 	padding: 25px 5%; width:100%; max-width: 800px;
-	background-color: rgba(255,255,255,0.50);
+	/*background-color: rgba(255,255,255,0.50);*/
 	font-size: 2.5em; 
 }
 .jumbo-splash {
@@ -151,6 +151,9 @@ ul.pagination li.previous-page a {
 .jumbo-splash .jumbotron .btn-primary:hover {
 	background-color:green;
 }
+.water-mark {
+	width:100px; position: absolute; bottom:50px; right: 25px; z-index: 5;
+}
 .logged_badge {
 	position: absolute; opacity: .2; top: 12px; margin-left: 38px; font-style: italic;
 }
@@ -158,7 +161,7 @@ ul.pagination li.previous-page a {
 	position: relative; height:100%; width: 100%;
 }
 .first-span {
-	padding-top: 70px; padding-bottom: 100px;
+	padding-top: 70px; padding-bottom: 50px;
 } 
 .first-span h1 {
 	margin-bottom: 30px;
@@ -201,7 +204,7 @@ ul.pagination li.previous-page a {
 }
 .prepaid-logo img {width: 100%;}
 .third-span {
-	padding-top: 75px; padding-bottom: 100px;
+	padding-top: 75px; padding-bottom: 50px;
 }
 .third-span .row .col-sm-3,
 .third-span .row .col-sm-4 {
@@ -400,8 +403,9 @@ ul.pagination li.previous-page a {
 	}
 	.hp-heading {
 		text-align: center; max-width: inherit;
-		font-size: 1.75em; 
+		font-size: 1.75em; bottom: 25px; 
 	}
+	.water-mark {display: none;}
 }
 
 
@@ -421,4 +425,13 @@ ul.pagination li.previous-page a {
 	.getCentered {
 		text-align: center !important;
 	}
+}
+
+@media screen and (min-width: 1500px) {
+	.hp-heading {
+		bottom: 125px; 
+	}
+	.water-mark {
+		bottom:120px;
+}
 }
