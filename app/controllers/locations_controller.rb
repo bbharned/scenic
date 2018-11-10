@@ -52,9 +52,17 @@ class LocationsController < ApplicationController
 
   
   def destroy
-    @location.destroy
-    flash[:danger] = "Location was successfully deleted"
-    redirect_to locations_path 
+    @orders = Order.where(location_id: @location.id)
+    if @location.destroy
+      flash[:danger] = "Location was successfully deleted"
+        if @orders.any?
+          @orders.destroy_all
+        end
+        redirect_to locations_path
+    else
+      flash[:danger] = "There was a problem removing the location."
+      redirect_to events_path
+    end 
   end
 
   private
