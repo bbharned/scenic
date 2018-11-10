@@ -152,13 +152,13 @@ ul.pagination li.previous-page a {
 	background-color:green;
 }
 .water-mark {
-	width:100px; position: absolute; bottom:50px; right: 5%; z-index: 5;
+	width:75px; position: absolute; bottom:70px; right: 5%; z-index: 5;
 }
 .logged_badge {
 	position: absolute; opacity: .2; top: 12px; margin-left: 38px; font-style: italic;
 }
 .image-fill {
-	position: relative; height:100%; width: 100%;
+	position: relative; height:80%; width: 100%; padding-top: 20%;
 }
 .first-span {
 	padding-top: 70px; padding-bottom: 50px;
@@ -167,7 +167,7 @@ ul.pagination li.previous-page a {
 	margin-bottom: 30px;
 }
 .first-span p {
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 .image-fill img {
 	width:100%;
@@ -409,6 +409,9 @@ ul.pagination li.previous-page a {
 		font-size: 1.75em; bottom: 25px; 
 	}
 	.water-mark {display: none;}
+	.image-fill {
+		height:inherit; padding-top:150px; 
+	}
 }
 
 
@@ -428,6 +431,9 @@ ul.pagination li.previous-page a {
 	.getCentered {
 		text-align: center !important;
 	}
+	.image-fill {
+		height:inherit; padding-top:0; margin-top: 35px;
+	}
 }
 
 @media screen and (min-width: 1500px) {
@@ -435,6 +441,6 @@ ul.pagination li.previous-page a {
 		bottom: 125px; 
 	}
 	.water-mark {
-		bottom:120px;
+		bottom:140px;
 }
 }
