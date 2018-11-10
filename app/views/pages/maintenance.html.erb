@@ -1,0 +1,42 @@
+<div class="container">
+
+<h1>Please Choose your County</h1>
+<hr />
+<p>To submit a maintenance request, select Your County for which you would like to submit the request for.</p>
+<br /><br />
+
+<%= form_tag(controller: "orders", action: "choice", method: "get", class: "form-horizontal") do %>
+<div class="form-group">
+	<div class="row">
+	  <div class="col col-md-6">
+	  	<span class="bold"><%= label_tag (:county) %></span>
+	  	<br />
+	  	
+	  	<%= select_tag(:county, options_for_select(
+	  		[
+	  			[ ],
+	  			['Hillsbough County - Tampa, Florida', 'HCPS'] 
+	  		], { class: "form-control" }
+	  	)) %>
+	  	
+	  </div>
+	</div>
+</div>
+<br />
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-6">
+          <%= submit_tag "Select County", class: "btn btn-primary btn-sm" %>
+        </div>
+    </div>
+</div>
+      <br /><br />
+<% end %>
+
+
+
+
+
+
+
+</div>

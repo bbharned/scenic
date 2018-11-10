@@ -56,7 +56,18 @@ def destroy
 	redirect_to orders_path 
 end
 
+def choice
+	@county = params[:county]
 
+	if @county == 'HCPS'
+		redirect_to new_order_path
+	elsif 
+		flash[:danger] = "Please select a County"
+		redirect_to maintenance_path
+	else
+		redirect_to maintenance_path
+	end
+end
 
 
 

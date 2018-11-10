@@ -35,8 +35,9 @@ resources :users #Website Users
 
 #HCPS Functionality Routes
 resources :locations #HCPS locations
-get 'maintenance', to: 'orders#new'
-resources :orders, except: :new #HCPS Maintenance Requests
+get 'maintenance', to: 'pages#maintenance'
+post 'maintenace', to: 'orders#choice'
+resources :orders #HCPS Maintenance Requests
 get 'open', to: 'orders#open'
 get 'closed', to: 'orders#closed'
 
