@@ -1,7 +1,16 @@
 <div class="container">
-	<h1 align="center" class="page-header">Maintenance Work Order (MWO)</h1>
-	<h6 align="center" class="page-sub-header">Please fill out the form below and we will be in contact with you shortly.</h6>
 	
+	<div class="row">
+		<div class="col-md-8 maint-header">
+			<h1 class="page-header">Maintenance Work Order (MWO)</h1>
+			<h6 class="page-sub-header">Please fill out the form below and we will be in contact&nbsp;with&nbsp;you&nbsp;shortly.</h6>
+		</div>
+		<div class="col-md-4" >
+			<div class="hcps-logo">
+				<%= image_tag "HCPS-logo.png" %>
+			</div>
+		</div>
+	</div>
 	<hr />
 	<%= render 'shared/errors', obj: @order %>
 	<h4 align="center" style="text-decoration: underline;;">Please select your facility</h4>

@@ -261,6 +261,13 @@ ul.pagination li.previous-page a {
 .orders-nav li a {
 	color:inherit !important;
 }
+.maint-header h1 {
+	font-size: 2.5em;
+}
+.hcps-logo {
+	 
+}
+.hcps-logo img {width:100%;}
 
 
 
@@ -418,6 +425,9 @@ ul.pagination li.previous-page a {
 	.image-fill {
 		height:inherit; padding-top:150px; 
 	}
+	.maint-header h1 {
+		font-size: 1.5em;
+	}
 }
 
 
@@ -439,6 +449,9 @@ ul.pagination li.previous-page a {
 	}
 	.image-fill {
 		height:inherit; padding-top:0; margin-top: 35px;
+	}
+	.maint-header {
+		text-align: center;
 	}
 }
 
