@@ -250,6 +250,9 @@ ul.pagination li.previous-page a {
 	padding: 0px 50px;
 }
 .ensite-bio-text {display:none;}
+.card .card-body .partner-logo img {
+	width:100%;
+}
 
 
 
