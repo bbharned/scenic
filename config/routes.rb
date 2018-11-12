@@ -15,6 +15,7 @@ resources :contacts, except: [:new, :index, :edit, :destroy]
 #get 'how.php', to: 'pages#how'
 get 'who', to: 'pages#who'
 get 'who.php', to: 'pages#who'
+get 'partners', to: 'pages#partners'
 #get 'memdexcell', to: 'pages#memdexcell'
 #get 'memdexcell.php', to: 'pages#memdexcell'
 get 'more', to: 'pages#more'
