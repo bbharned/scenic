@@ -19,14 +19,30 @@
 			    </div>
 			</div>
 			<div class="card-footer">
-		    	<h4>Ensight</h4>
-		    	<p class="card-text">Ensight is an energy management design, implementation company that enters into long term partnerships to sustain energy cost savings for large corporations. Through its enterprise Energy Analyzer design software and its Energy Leadership Program Ensight has a platform to work with large corporates to achieve 20%+ energy cost savings profitably whilst supporting tight cash flows and challenging operating environments, Ensight delivers holistic energy design solutions with focused M&V saving with no-capital investment. Energy projects requiring capital are taken off balance sheet to leverage savings from the opportunity for projects that would normally stay undeveloped.</p>
-		    	<hr />
-		    	<h4>Partnership with Minimise</h4>
-		    	<p class="card-text">Ensight provides Minimise USA with its energy design and financial strategy and M&V services in all the four solutions delivered at Hillsborough County Public Schools. From the design of the solution sets within each solution, to the creation of the digital platform and energy management digital modules that exploit the power of the Iot.Nxt Commander, Raptor and Ensicope technologies and software on legacy BMSs. Working at risk in the early stages of the project, Ensight ate its own dog food to support the creation of a successful project with Minimise USA.</p>
-		    	<hr /> 
-		    	<h4>Future as Minimise Partner</h4>
-		    	<p class="card-text">Ensight's vision of reducing global greenhouse gas emissions by 100MT by 2032 will be accelerated through its partnership with Minimise USA. The digital energy management platform can be rolled out globally to transform energy use in the commercial and industrial sectors. The roll out exploits a weakness of the existing legacy BMS companies, in that they make money on rip and replace and Minimise USA makes money on minimise investment requirements and applying intelligence to basically dumb systems. This approach will allow mass replication and roll out of solution sets saving in the order of 25% in the commercial and industrial sectors.</p>
+				<ul class="nav partner-nav">
+				  <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle ensight-bio" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Company Bio</a>
+			        <div class="partner-sub-menu ensight-bio-text" aria-labelledby="navbarDropdown">
+			        	<p>Ensight is an energy management design, implementation company that enters into long term partnerships to sustain energy cost savings for large corporations. Through its enterprise Energy Analyzer design software and its Energy Leadership Program Ensight has a platform to work with large corporates to achieve 20%+ energy cost savings profitably whilst supporting tight cash flows and challenging operating environments, Ensight delivers holistic energy design solutions with focused M&V saving with no-capital investment. Energy projects requiring capital are taken off balance sheet to leverage savings from the opportunity for projects that would normally stay undeveloped.</p>
+			        </div>
+			      </li>
+
+			      <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle ensight-partnership" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Partnership with Minimise</a>
+			        <div class="partner-sub-menu ensight-partnership-text" aria-labelledby="navbarDropdown">
+			        	<p>Ensight provides Minimise USA with its energy design and financial strategy and M&V services in all the four solutions delivered at Hillsborough County Public Schools. From the design of the solution sets within each solution, to the creation of the digital platform and energy management digital modules that exploit the power of the Iot.Nxt Commander, Raptor and Ensicope technologies and software on legacy BMSs. Working at risk in the early stages of the project, Ensight ate its own dog food to support the creation of a successful project with Minimise USA.</p>
+			        </div>
+			      </li>
+
+			      <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle ensight-future" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" style="border-bottom:none;">Future as Minimise Partner</a>
+			        <div class="partner-sub-menu ensight-future-text" aria-labelledby="navbarDropdown">
+			        	<p>Ensight's vision of reducing global greenhouse gas emissions by 100MT by 2032 will be accelerated through its partnership with Minimise USA. The digital energy management platform can be rolled out globally to transform energy use in the commercial and industrial sectors. The roll out exploits a weakness of the existing legacy BMS companies, in that they make money on rip and replace and Minimise USA makes money on minimise investment requirements and applying intelligence to basically dumb systems. This approach will allow mass replication and roll out of solution sets saving in the order of 25% in the commercial and industrial sectors.</p>
+			        </div>
+			      </li>
+
+				</ul>
+		    	
 			</div>
   	</div>
  </div>
@@ -91,3 +107,17 @@
  </div>
 
 </div>
+
+<script type="text/javascript">
+	
+		$(".ensight-bio").on("click", function(){
+			$('.ensight-bio-text').toggle(350); 
+		});
+		$(".ensight-partnership").on("click", function(){
+			$('.ensight-partnership-text').toggle(350); 
+		});
+		$(".ensight-future").on("click", function(){
+			$('.ensight-future-text').toggle(350); 
+		});
+	
+</script>

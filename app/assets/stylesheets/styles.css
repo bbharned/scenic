@@ -225,7 +225,31 @@ ul.pagination li.previous-page a {
 } 
 
 
-
+/******************** Partner Page ******************/
+.card-footer {
+	width:100%;
+}
+.partner-nav {
+	margin-top: -10px;
+	
+}
+.partner-nav li {
+	width:100% !important;
+}
+.partner-nav a {
+	color:inherit; font-size: 1.5em;
+	border-bottom: 0.5px solid #919191;
+	padding-bottom: 15px;
+}
+.partner-nav .partner-sub-menu {
+	width:100% !important;
+	padding: 20px;
+	display:none;
+}
+.partner-nav .partner-sub-menu p {
+	padding: 0px 50px;
+}
+.ensite-bio-text {display:none;}
 
 
 
