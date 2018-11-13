@@ -231,14 +231,13 @@ ul.pagination li.previous-page a {
 }
 .partner-nav {
 	margin-top: -10px;
-	
 }
 .partner-nav li {
 	width:100% !important;
 }
 .partner-nav a {
 	color:inherit; font-size: 1.5em;
-	border-bottom: 0.5px solid #919191;
+	border-top: 0.5px solid #919191;
 	padding-bottom: 15px;
 }
 .partner-nav .partner-sub-menu {
