@@ -37,15 +37,56 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Options
+          About
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "About Us", about_path, class: "dropdown-item" %>
+          <%= link_to "Achievements", achievements_path, class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Our Partners", partners_path, class: "dropdown-item" %>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Learn
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "Why Minimise", why_path, class: "dropdown-item" %>
+          <%= link_to "Our Partners", partners_path, class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
           <%= link_to "Case Studies", cases_path, class: "dropdown-item" %>
-          <%= link_to "Maintenance", maintenance_path, class: "dropdown-item" %>
-          <%= link_to "Savings Calculator", "https://www.florida-districts.com", target: "_blank", class: "dropdown-item" %>
+          <%= link_to "More...", more_path, class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "MAXIMISE", contact_path, class: "dropdown-item" %>
         </div>
       </li>
       
+      <li class="nav-item">
+        <%= link_to "Contact", contact_path, class: "nav-link" %>
+      </li>
+
+      <% if logged_in? %>
+      <h6><span class="badge badge-secondary logged_badge">logged in</span></h6>
+      <li class="nav-item nav-spacer" style="border-right:1px solid #333333;">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          &nbsp;&nbsp;&nbsp;&nbsp;Admin
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "Users", users_path, class: 'dropdown-item' %>
+          <%= link_to "HCPS Locations", locations_path, class: 'dropdown-item' %>
+          <%= link_to "HCPS Orders", orders_path, class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "My Profile", user_path(current_user), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "logout", logout_path, method: :delete, class: 'dropdown-item' %>
+        </div>
+      </li>
+      <% else %>
+
+      <% end %>
 
       
     </ul>
