@@ -12,7 +12,8 @@ gem 'rails', '~> 5.0.7'
 
 #gem 'twitter-bootstrap-rails'
 
-
+#gem "actionview", ">= 5.0.7.2"
+#gem 'sqlite3'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -20,6 +21,7 @@ gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 #gem 'bootstrap-sass', '~> 3.3.7'
 gem 'bootstrap', '~> 4.1.3'
+
 
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -46,7 +48,7 @@ gem 'bootstrap-will_paginate', '1.0.0'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.13'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
