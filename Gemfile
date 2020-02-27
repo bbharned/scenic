@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.5.7'
+ruby '2.5.6'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -20,12 +20,12 @@ gem 'puma', '~> 3.0'
 
 # Use SCSS for stylesheets
 #gem 'bootstrap-sass', '~> 3.3.7'
-<<<<<<< HEAD
-gem 'bootstrap', '~> 4.1.3'
-#gem 'nokogiri', '>= 1.10.8'
-=======
+# <<<<<<< HEAD
+# gem 'bootstrap', '~> 4.1.3'
+# # #gem 'nokogiri', '>= 1.10.8'
+# =======
 gem "bootstrap", ">= 4.3.1"
->>>>>>> ccd700911bc531a282b14ad935a886689587640d
+# >>>>>>> ccd700911bc531a282b14ad935a886689587640d
 
 
 gem 'sass-rails', '~> 5.0'
